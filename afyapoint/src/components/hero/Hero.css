@@ -1,0 +1,69 @@
+/* cta */
+.well.well-trans {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+/* lead */
+ul.lead-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+ul.lead-list li {
+  display: flex;
+
+  margin: 0 0 20px 0;
+  line-height: 1.6em;
+}
+
+ul.lead-list li span.fa {
+  margin: 5px 5px 0 0;
+  float: left;
+}
+
+ul.lead-list li span.list {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+
+.intro {
+  width: 100%;
+  position: relative;
+}
+
+.intro-content {
+  background: url(../../assets/black-mother-child-healthcare-doctor[1].jpg)
+    no-repeat top center;
+  padding: 200px 0 60px;
+}
+.intro-content.intro-nobg {
+  background: #fff;
+  position: relative;
+  margin: 0;
+  padding: 140px 0 60px;
+}
+
+.slogan {
+  margin-bottom: 20px;
+}
+
+.white-box {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.intro-content h2 {
+  margin-bottom: 10px;
+}
+
+.icon-success {
+  color: #7db53b;
+}

@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// import your fontawesome library
+import "./fontawesome";
 import "bootstrap/dist/css/bootstrap.css";
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import "./index.css";
-import App from "./components/App";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(

@@ -1,0 +1,19 @@
+.home-section {
+  padding-top: 150px;
+  display: block;
+  position: relative;
+  z-index: 120;
+  background-color: #fff;
+}
+
+.circled {
+  border-radius: 50%;
+  display: inline-block;
+  color: #fff;
+  width: 1.8em !important;
+  height: 1.8em !important;
+}
+
+.bg-skin {
+  background: #4accd1;
+}
