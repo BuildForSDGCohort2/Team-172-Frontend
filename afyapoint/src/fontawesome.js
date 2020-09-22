@@ -6,12 +6,22 @@ import {
   faListAlt,
   faUserMd,
   faHospital,
+  faFilter,
+  faHSquare,
+  faPlusSquare,
+  faWheelchair,
+  faStethoscope,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faCheck,
   faListAlt,
   faUserMd,
-  faHospital
+  faHospital,
+  faFilter,
+  faHSquare,
+  faPlusSquare,
+  faWheelchair,
+  faStethoscope
   // more icons go here
 );

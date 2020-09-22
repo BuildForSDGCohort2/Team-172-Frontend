@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import your fontawesome library
 import "./fontawesome";
 import "bootstrap/dist/css/bootstrap.css";
@@ -7,11 +8,21 @@ import "bootstrap/dist/css/bootstrap.css";
 // components takes precedence over default styles.
 import "./index.css";
 import App from "./App";
+import CallToAction from "./components/callToAction/CallToAction";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <App />
+        </Route>
+        <Route path="/signup">
+          <CallToAction />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

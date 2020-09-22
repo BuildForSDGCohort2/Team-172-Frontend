@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./Hero.css";
 
 function Hero() {
@@ -62,13 +64,21 @@ function Hero() {
                     </li>
                   </ul>
                   <p className="text-right wow bounceIn" data-wow-delay="0.4s">
-                    <a href="./user/index.html" className="btn btn-info mr-2">
+                    <Link
+                      to="/signup"
+                      href="./user/index.html"
+                      className="btn btn-info mr-2"
+                    >
                       Sign up <i className="fa fa-angle-right"></i>
-                    </a>
-                    <a href="./staff/index.html" className="btn btn-info">
+                    </Link>
+                    <Link
+                      to="/worker-signup"
+                      href="./staff/index.html"
+                      className="btn btn-info"
+                    >
                       Sign up as Health Workers{" "}
                       <i className="fa fa-angle-right"></i>
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </div>

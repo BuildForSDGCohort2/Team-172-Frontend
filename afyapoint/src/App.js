@@ -4,6 +4,8 @@ import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Boxes from "./components/boxes/Boxes";
 import CallToAction from "./components/callToAction/CallToAction";
+import Services from "./components/services/Services";
+import Team from "./components/team/Team";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Hero />
       <Boxes />
       <CallToAction />
+      <Services />
+      <Team />
     </div>
   );
 }
