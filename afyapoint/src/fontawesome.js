@@ -11,7 +11,18 @@ import {
   faPlusSquare,
   faWheelchair,
   faStethoscope,
+  faCalendar,
+  faPhone,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faFacebook,
+  faTwitter,
+  faGooglePlus,
+  faVimeoSquare,
+  faDribbble,
+} from "@fortawesome/free-brands-svg-icons";
 
 library.add(
   faCheck,
@@ -22,6 +33,14 @@ library.add(
   faHSquare,
   faPlusSquare,
   faWheelchair,
-  faStethoscope
+  faStethoscope,
+  faCalendar,
+  faPhone,
+  faEnvelope,
+  faFacebook,
+  faTwitter,
+  faGooglePlus,
+  faVimeoSquare,
+  faDribbble
   // more icons go here
 );

@@ -1,3 +1,7 @@
+.App {
+  overflow-x: hidden;
+}
+
 h1 {
   font-size: 38px;
 }
@@ -23,11 +27,12 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 30px;
+  margin: 0 0 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #444;
   line-height: 1em;
+  letter-spacing: -1px;
 }
 
 .highlight {

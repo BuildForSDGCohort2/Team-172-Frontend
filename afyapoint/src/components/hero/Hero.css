@@ -34,13 +34,14 @@ ul.lead-list li span.list {
 }
 
 .intro {
-  width: 100%;
+  max-width: 100%;
   position: relative;
+  background: url(../../assets/black-mother-child-healthcare-doctor[1].jpg)
+    no-repeat top center;
+  background-size: cover;
 }
 
 .intro-content {
-  background: url(../../assets/black-mother-child-healthcare-doctor[1].jpg)
-    no-repeat top center;
   padding: 200px 0 60px;
 }
 .intro-content.intro-nobg {

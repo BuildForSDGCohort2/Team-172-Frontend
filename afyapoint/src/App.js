@@ -6,6 +6,9 @@ import Boxes from "./components/boxes/Boxes";
 import CallToAction from "./components/callToAction/CallToAction";
 import Services from "./components/services/Services";
 import Team from "./components/team/Team";
+import Works from "./components/works/Works";
+import Partners from "./components/partners/Partners";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
       <CallToAction />
       <Services />
       <Team />
+      <Works />
+      <Partners />
+      <Footer />
     </div>
   );
 }

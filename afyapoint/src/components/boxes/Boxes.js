@@ -4,11 +4,11 @@ import "./Boxes.css";
 
 function Boxes() {
   return (
-    <section id="boxes" className="home-section pt-5">
+    <section id="boxes" className="pt-5">
       <div className="container">
         <div className="row">
-          <div className=" col-md-3">
-            <div className="wow fadeInUp" data-wow-delay="0.2s">
+          <div className="col-md-6 col-lg-3">
+            <div>
               <div className="box text-center">
                 <FontAwesomeIcon
                   icon={["fas", "check"]}
@@ -23,8 +23,8 @@ function Boxes() {
               </div>
             </div>
           </div>
-          <div className=" col-md-3">
-            <div className="wow fadeInUp" data-wow-delay="0.2s">
+          <div className="col-md-6 col-lg-3">
+            <div>
               <div className="box text-center">
                 <FontAwesomeIcon
                   icon={["fas", "list-alt"]}
@@ -39,8 +39,8 @@ function Boxes() {
               </div>
             </div>
           </div>
-          <div className=" col-md-3">
-            <div className="wow fadeInUp" data-wow-delay="0.2s">
+          <div className="col-md-6 col-lg-3">
+            <div>
               <div className="box text-center">
                 <FontAwesomeIcon
                   icon={["fas", "user-md"]}
@@ -56,8 +56,8 @@ function Boxes() {
               </div>
             </div>
           </div>
-          <div className=" col-md-3">
-            <div className="wow fadeInUp" data-wow-delay="0.2s">
+          <div className="col-md-6 col-lg-3">
+            <div>
               <div className="box text-center">
                 <FontAwesomeIcon
                   icon={["fas", "hospital"]}

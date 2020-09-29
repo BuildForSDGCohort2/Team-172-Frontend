@@ -51,7 +51,7 @@ function Team() {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="wow fadeInDown" data-wow-delay="0.1s">
+            <div>
               <div className="section-heading text-center">
                 <h2 className="h-bold mb-3 font-weight-bold">Doctors</h2>
                 <p>Highly certified doctors from all parts of the world.</p>

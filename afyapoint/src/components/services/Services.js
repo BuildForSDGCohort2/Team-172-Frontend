@@ -8,13 +8,13 @@ function Services() {
     <section id="service" className="home-section pt-5">
       <div className="container">
         <div className="row">
-          <div className="col-sm-6 col-md-6">
-            <div className="wow fadeInUp" data-wow-delay="0.2s">
-              <img src={background} className="img-fluid" alt="" />
+          <div className="col-sm-12 col-lg-6 mb-2">
+            <div>
+              <img src={background} className="img-fluid" alt="illustration" />
             </div>
           </div>
-          <div className="col-sm-3 col-md-3">
-            <div className="wow fadeInRight" data-wow-delay="0.1s">
+          <div className="col-sm-6 col-lg-3">
+            <div>
               <div className="service-box">
                 <div className="service-icon">
                   <FontAwesomeIcon
@@ -29,8 +29,7 @@ function Services() {
                 </div>
               </div>
             </div>
-
-            <div className="wow fadeInRight" data-wow-delay="0.2s">
+            <div>
               <div className="service-box">
                 <div className="service-icon">
                   <span className="fa fa-wheelchair fa-3x"></span>
@@ -46,7 +45,7 @@ function Services() {
                 </div>
               </div>
             </div>
-            <div className="wow fadeInRight" data-wow-delay="0.3s">
+            <div>
               <div className="service-box">
                 <div className="service-icon">
                   <FontAwesomeIcon
@@ -62,8 +61,8 @@ function Services() {
               </div>
             </div>
           </div>
-          <div className="col-sm-3 col-md-3">
-            <div className="wow fadeInRight" data-wow-delay="0.1s">
+          <div className="col-sm-6 col-lg-3">
+            <div>
               <div className="service-box">
                 <div className="service-icon">
                   <FontAwesomeIcon
@@ -78,8 +77,7 @@ function Services() {
                 </div>
               </div>
             </div>
-
-            <div className="wow fadeInRight" data-wow-delay="0.2s">
+            <div>
               <div className="service-box">
                 <div className="service-icon">
                   <FontAwesomeIcon
@@ -94,7 +92,7 @@ function Services() {
                 </div>
               </div>
             </div>
-            <div className="wow fadeInRight" data-wow-delay="0.3s">
+            <div>
               <div className="service-box d-flex">
                 <div className="service-icon">
                   <FontAwesomeIcon

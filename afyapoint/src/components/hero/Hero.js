@@ -11,18 +11,14 @@ function Hero() {
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
-              <div
-                className="wow fadeInDown text-left"
-                data-wow-offset="0"
-                data-wow-delay="0.1s"
-              >
+              <div>
                 <h2 className="h-ultra highlight">Afya-Point medical group</h2>
                 <h2 className="h-medium">
                   Provide high quality healthcare for you
                 </h2>
               </div>
               <div className="well well-trans">
-                <div className="wow fadeInRight" data-wow-delay="0.1s">
+                <div>
                   <ul className="lead-list text-left">
                     <li>
                       <FontAwesomeIcon
@@ -63,7 +59,7 @@ function Hero() {
                       </span>
                     </li>
                   </ul>
-                  <p className="text-right wow bounceIn" data-wow-delay="0.4s">
+                  <p className="text-right">
                     <Link
                       to="/signup"
                       href="./user/index.html"
