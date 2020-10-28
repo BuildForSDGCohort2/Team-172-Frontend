@@ -1,13 +1,54 @@
-import React from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "../../axios";
+import { AppContext } from "../../AppContext";
 import "./Navbar.css";
-import logo from "../../assets/Asset 1.svg";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
+  const [account, setAccount] = useState(null);
+  let [state, dispatch] = useContext(AppContext);
+  const handleLogout = () => {
+    dispatch({ type: "SIGN_OUT" });
+  };
+
+  useEffect(() => {
+    let mounted = true;
+
+    if (account) {
+      return;
+    }
+
+    const token = localStorage.getItem("jwtToken");
+    if (!token) {
+      return;
+    }
+
+    axios
+      .get("users/me", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        if (mounted) {
+          setAccount(response.data);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    return function cleanup() {
+      mounted = false;
+    };
+  }, [account]);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between position-fixed w-100 shadow-sm">
       <div className="container">
         <a className="navbar-brand" href="/">
-          <img src={logo} alt="" width="60" height="50" />
+          <img src={logo} alt="" height="50" />
         </a>
         <button
           className="navbar-toggler"
@@ -27,42 +68,43 @@ function Navbar() {
         >
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#home">
+              <Link className="nav-link" to="/">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#service">
+              <Link to="/service" className="nav-link">
                 Service
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#doctors">
+              <Link to="/team" className="nav-link">
                 Doctors
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#org">
-                Health Organization
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#pricing">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#access">
-                Health Workers Access
-              </a>
-            </li>
-            <li className="nav-item">
-              <button
-                className="btn btn-outline-info my-2 my-sm-0"
-                type="button"
-              >
-                Login
-              </button>
+              {state.isAuthenticated ? (
+                <>
+                  <span className="p-2">
+                    Howday, {account ? account.firstName : null}
+                  </span>
+                  <button
+                    type="button"
+                    className="btn btn-outline-info my-2 my-sm-0"
+                    onClick={handleLogout}
+                  >
+                    Sign out
+                  </button>
+                </>
+              ) : (
+                <Link
+                  to="/signin"
+                  className="btn btn-outline-info my-2 my-sm-0"
+                  type="button"
+                >
+                  Sign In
+                </Link>
+              )}
             </li>
           </ul>
         </div>
