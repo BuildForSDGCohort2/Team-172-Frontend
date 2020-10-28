@@ -1,28 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 // import your fontawesome library
 import "./fontawesome";
 import "bootstrap/dist/css/bootstrap.css";
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 import "./index.css";
-import App from "./App";
-import CallToAction from "./components/callToAction/CallToAction";
+import Routes from "./Routes";
+import { AppStateProvider } from "./AppContext";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route path="/signup">
-          <CallToAction />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <AppStateProvider>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </AppStateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

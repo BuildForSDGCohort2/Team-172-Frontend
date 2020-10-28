@@ -47,7 +47,7 @@ function Team() {
     setProjects(filtered);
   }, [filter]);
   return (
-    <section className="bg-light mt-3 py-5">
+    <section className="bg-white py-5">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
