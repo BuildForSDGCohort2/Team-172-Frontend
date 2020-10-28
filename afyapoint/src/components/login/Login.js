@@ -3,7 +3,6 @@
 import React, { useState, useContext } from "react";
 import { Redirect, useHistory, useLocation } from "react-router-dom";
 import "./Login.css";
-import logo from "../../assets/logo.png";
 import { login } from "./service";
 import { AppContext } from "../../AppContext";
 import { validationError } from "../../error";
@@ -41,58 +40,52 @@ export default function SignIn() {
     <React.Fragment>
       <div className="container-fluid bg">
         <div className="row">
-          <div className="col-md-4 col-xs-12 offset-md-4 offset-sm-4">
-            <div className="form-wrapper">
-              <div className="form-container">
-                <div className="form-group">
-                  <a className="navbar-brand" href="/">
-                    <img src={logo} alt="" height="50" />
-                  </a>
+          <div className="form-wrapper">
+            <div className="form-container">
+              <div className="form-group">
+                {validation.identifier ? (
+                  <div className="alert alert-danger" role="alert">
+                    {validation.identifier}
+                  </div>
+                ) : null}
+                {validation.password ? (
+                  <div className="alert alert-danger" role="alert">
+                    {validation.password}
+                  </div>
+                ) : null}
 
-                  {validation.identifier ? (
-                    <div className="alert alert-danger" role="alert">
-                      {validation.identifier}
-                    </div>
-                  ) : null}
-                  {validation.password ? (
-                    <div className="alert alert-danger" role="alert">
-                      {validation.password}
-                    </div>
-                  ) : null}
-
-                  <input
-                    className="form-control"
-                    type="text"
-                    name="identidier"
-                    onChange={(e) => {
-                      const { value } = e.target;
-                      setIdentifier(value);
-                    }}
-                    placeholder="Email or Phone"
-                    value={identifier}
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control"
-                    type="password"
-                    name="password"
-                    onChange={(e) => {
-                      const { value } = e.target;
-                      setPassword(value);
-                    }}
-                    placeholder="Password"
-                    value={password}
-                  />
-                </div>
-                <button
-                  type="submit"
-                  onClick={handleLogin}
-                  className="btn btn-info btn-block"
-                >
-                  Login
-                </button>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="identidier"
+                  onChange={(e) => {
+                    const { value } = e.target;
+                    setIdentifier(value);
+                  }}
+                  placeholder="Email or Phone"
+                  value={identifier}
+                />
               </div>
+              <div className="form-group">
+                <input
+                  className="form-control"
+                  type="password"
+                  name="password"
+                  onChange={(e) => {
+                    const { value } = e.target;
+                    setPassword(value);
+                  }}
+                  placeholder="Password"
+                  value={password}
+                />
+              </div>
+              <button
+                type="submit"
+                onClick={handleLogin}
+                className="btn btn-info btn-block"
+              >
+                Login
+              </button>
             </div>
           </div>
         </div>
