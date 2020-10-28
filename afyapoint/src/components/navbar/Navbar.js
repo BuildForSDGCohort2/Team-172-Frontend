@@ -86,7 +86,8 @@ function Navbar() {
               {state.isAuthenticated ? (
                 <>
                   <span className="p-2">
-                    Howday, {account ? account.firstName : null}
+                    Howday,{" "}
+                    {account ? `${account.firstName} [${account.role}]` : null}
                   </span>
                   <button
                     type="button"
@@ -97,13 +98,15 @@ function Navbar() {
                   </button>
                 </>
               ) : (
-                <Link
-                  to="/signin"
-                  className="btn btn-outline-info my-2 my-sm-0"
-                  type="button"
-                >
-                  Sign In
-                </Link>
+                <div>
+                  <Link
+                    to="/signin"
+                    className="btn btn-outline-info my-2 my-sm-0 mr-2"
+                    type="button"
+                  >
+                    Sign In
+                  </Link>
+                </div>
               )}
             </li>
           </ul>

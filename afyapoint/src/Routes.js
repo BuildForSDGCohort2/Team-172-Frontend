@@ -1,8 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 const Home = lazy(() => import("./components/home/Home"));
-const CallToAction = lazy(() =>
-  import("./components/callToAction/CallToAction")
+const Register = lazy(() => import("./components/register/Register"));
+const WorkerRegister = lazy(() =>
+  import("./components/register/WorkerRegister")
 );
 const Login = lazy(() => import("./components/login/Login"));
 const Team = lazy(() => import("./components/team/Team"));
@@ -30,14 +31,18 @@ const Routes = () => {
           </Layout>
         </Route>
         <Route path="/signin">
-          <Suspense fallback={<Loader />}>
-            <Login />
-          </Suspense>
+          <Layout>
+            <Suspense fallback={<Loader />}>
+              <Login />
+            </Suspense>
+          </Layout>
         </Route>
         <Route path="/signup">
-          <Suspense fallback={<Loader />}>
-            <CallToAction />
-          </Suspense>
+          <Layout>
+            <Suspense fallback={<Loader />}>
+              <Register />
+            </Suspense>
+          </Layout>
         </Route>
         <Route path="/service">
           <Layout>
@@ -50,6 +55,13 @@ const Routes = () => {
           <Layout>
             <Suspense fallback={<Loader />}>
               <Team />
+            </Suspense>
+          </Layout>
+        </Route>
+        <Route path="/worker-signup">
+          <Layout>
+            <Suspense fallback={<Loader />}>
+              <WorkerRegister />
             </Suspense>
           </Layout>
         </Route>
